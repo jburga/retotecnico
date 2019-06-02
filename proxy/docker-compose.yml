@@ -1,0 +1,14 @@
+--- 
+build: ./
+external: ~
+name: site2_default
+networks: ~
+ports: 
+  - "80:80"
+  - "443:443"
+proxy: ~
+services: ~
+site1: ~
+site2: ~
+version: "2"
+
