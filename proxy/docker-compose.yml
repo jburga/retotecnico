@@ -1,14 +1,14 @@
---- 
-build: ./
-external: ~
-name: site2_default
-networks: ~
-ports: 
-  - "80:80"
-  - "443:443"
-proxy: ~
-services: ~
-site1: ~
-site2: ~
-version: "2"
-
+version: "3"
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+# uso de la red en el servicio      
+    networks: 
+      - sitenet
+# definición de red
+networks:
+  sitenet:
+    driver: bridge
